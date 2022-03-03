@@ -34,10 +34,6 @@ export const Box = styled.div`
     gap: 505px;
     width: 675px;
   }
-
-  @media (min-width: 1024px) {
-    gap: 500px;
-  }
 `;
 
 export const Content = styled.div`
@@ -69,7 +65,10 @@ export const TechHeader = styled.div`
   flex-direction: row;
   gap: 170px;
   margin-left: 12px;
+  margin-top: 80px;
   align-items: center;
+  justify-content: center;
+
   @media (min-width: 800px) {
     > input {
       margin-left: 400px;
@@ -79,43 +78,46 @@ export const TechHeader = styled.div`
 
 export const BoxTechs = styled.div`
   flex-direction: column;
-  background-color: var(--grey-3);
-  min-height: 470px;
-  width: 300px;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
   > span {
     font-size: 16px;
   }
 
   @media (min-width: 800px) {
-    width: 700px;
+    width: 300px;
   }
 `;
 
 export const ContextTechs = styled.div`
   display: flex;
-  width: 100%;
-  border-radius: 4px;
+  width: 285px;
   background-color: var(--grey-3);
   padding: 16px 8px;
-
+  @media (min-width: 800px) {
+    width: 696px;
+    margin-left: 400px;
+  }
   > button {
     width: 285px;
+    height: 40px;
     color: var(--grey-0);
     background-color: var(--grey-4);
-    border-color: var(--grey-4);
+    border: none;
     :hover {
       background-color: var(--grey-4);
-      border-color: var(--grey-1);
     }
     @media (min-width: 800px) {
-      width: 690px;
+      width: 696px;
     }
   }
 `;
 
 export const ContainerTechs = styled.div`
-  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;

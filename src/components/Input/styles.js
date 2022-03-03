@@ -30,12 +30,12 @@ export const InputContainer = styled.div`
     @media (min-width: 800px) {
       width: 330px;
     }
-    width: 280px;
-    height: 38.5px;
+    width: 255px;
+    height: 34.5px;
     margin-top: 10px;
     &::placeholder {
       color: var(--grey-1);
-      font-size: 13px;
+      font-size: 10px;
     }
   }
 `;

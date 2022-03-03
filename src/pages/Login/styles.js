@@ -6,23 +6,24 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--grey-4);
 `;
 
 export const Form = styled.form`
-  min-height: 85vh;
-  background-color: var(-grey-3);
+  min-height: 50vh;
+  background-color: var(--grey-3);
   border-radius: 3.21px;
-  padding: 60px 18px;
-  box-shadow: 32px 0px 3.21px rgba(0, 0, 0, 0.25);
+  padding: 25px 10px;
+  box-shadow: 0 4px 40px rgb(0 0 0 / 25%);
   div + div {
     margin-top: 15px;
   }
   > h1 {
     color: var(--grey-0);
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    margin-top: 15px;
     font-size: 14.44px;
   }
 `;
@@ -40,6 +41,8 @@ export const Box = styled.div`
 `;
 
 export const Logo = styled.div`
+  margin-top: 60px;
+  margin-bottom: 20px;
   width: 101px;
   height: 14px;
   background: url(${logo}) no-repeat center;

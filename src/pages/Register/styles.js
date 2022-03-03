@@ -6,9 +6,9 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--grey-4);
-  overflow: auto;
+  overflow-y: scroll;
 `;
 
 export const Logo = styled.div`
@@ -29,29 +29,36 @@ export const Box = styled.section`
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 80px;
+  margin-top: 20px;
+  gap: 120px;
   > button {
     background-color: var(--grey-3);
     border-color: var(--grey-3);
     width: 70px;
+    height: 20px;
     color: var(--grey-0);
-    font-size: 14px;
+    font-size: 12px;
   }
   @media (min-width: 800px) {
-    gap: 150px;
-    margin-top: 20px;
+    gap: 190px;
   }
 `;
 
 export const Form = styled.form`
-  min-height: 90vh;
+  height: 780px;
+  width: 290px;
   text-align: center;
   margin-top: 22px;
+  background-color: var(--grey-3);
+  @media (min-width: 800px) {
+    width: 360px;
+    height: 830px;
+  }
   
   > span {
     color: var(--grey-1);
     font-size: 12px;
-    margin-top: 2px;
+    margin-top: 10px;
     gap: 50px;
     @media (min-width: 800px) {
       font-size: 15px;
@@ -62,6 +69,7 @@ export const Form = styled.form`
     color: var(--grey-0);
     font-size: 15px;
     margin-bottom: 10px;
+    margin-top: 20px;
     text-align: center;
     @media (min-width: 800px) {
       font-size: 18px;
@@ -81,15 +89,16 @@ export const BoxInput = styled.div`
 `;
 
 export const Select = styled.select`
-  width: 280px;
+  width: 255px;
   @media (min-width: 800px) {
     width: 330px;
   }
-  height: 38.5px;
+  height: 34.5px;
   background: var(--grey-2);
   color: var(--grey-1);
-  font-size: 14px;
+  font-size: 11px;
   border: 1.22px solid var(--grey-4);
+  border-radius: 4px;
   padding: 0px 16px;
   margin-top: 10px;
   option {

@@ -15,25 +15,30 @@ export const Container = styled.div`
 export const Context = styled.div`
   width: 300px;
   height: 274.34px;
-  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3.2px 31.98px rgba(0, 0, 0, 0.2);
   background-color: var(--grey-3);
   color: var(--grey-0);
   position: relative;
   z-index: 10;
-  border-radius: 10px;
+  border-radius: 3.2px;
+  bottom: 130px;
 `;
 export const ModalHeader = styled.div`
   display: flex;
   flex-direction: row;
   align-content: center;
   justify-content: space-between;
+  background-color: var(--grey-2);
+  height: 40px;
   > h1 {
     font-size: 14px;
+    margin: 10px 0px 0px 10px;
   }
   > button {
     color: var(--grey-1);
     background-color: var(--grey-2);
     border: none;
+    margin-right: 10px;
   }
 `;
 
@@ -47,10 +52,10 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-content: center;
-
+  margin: 0 10px 0 10px;
   > h1 {
     margin-top: 20px;
-    font-size: 9.74px;
+    font-size: 14px;
   }
   > span {
     display: flex;
@@ -109,9 +114,10 @@ export const ContainerSelectDetail = styled.section`
   margin-top: 5px;
 
   > span {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
+    margin-top: 8px;
     color: var(--grey-0);
-    font-size: 9.77px;
+    font-size: 14px;
     text-align: left;
   }
 `;

@@ -1,5 +1,4 @@
 import Button from "../Button";
-import Input from "../Input";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -35,7 +34,10 @@ const ModalAddTechs = ({ token, showModalAdd, onClose }) => {
           Authorization: `Bearer ${token}`,
         },
       })
-      .then((_) => toast.success("Tecnologia cadastrada com sucesso"))
+      .then(
+        (_) => toast.success("Tecnologia cadastrada com sucesso"),
+        onClose()
+      )
       .catch((_) => toast.error("Já existe uma tecnologia com este nome"));
   };
 
@@ -53,11 +55,10 @@ const ModalAddTechs = ({ token, showModalAdd, onClose }) => {
         </ModalHeader>
         <ModalBody>
           <Form onSubmit={handleSubmit(onSubmit)}>
-            <Input
-              label="Nome"
+            <label>Nome</label>
+            <input
               placeholder="Digite o nome"
-              register={register}
-              name="title"
+              {...register("title")}
               error={errors.title?.message}
             />
             <ContainerSelect>

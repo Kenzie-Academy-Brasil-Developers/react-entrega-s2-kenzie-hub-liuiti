@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const ListContainer = styled.div`
   height: 40px;
-  width: 100%;
   margin-bottom: 10px;
   align-items: center;
   border-radius: 4px;
@@ -28,6 +27,7 @@ export const ListContainer = styled.div`
   span {
     font-size: 12px;
     color: var(--grey-1);
+    margin-right: 10px;
   }
   :hover {
     background-color: var(--grey-2);

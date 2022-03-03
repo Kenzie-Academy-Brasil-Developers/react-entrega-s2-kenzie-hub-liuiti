@@ -20,11 +20,7 @@ const ModalDetails = ({ newTechsId, title, token, show, onClose }) => {
     status: yup.string().required("Status obrigatório"),
   });
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({ resolver: yupResolver(schema) });
+  const { register, handleSubmit } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = (data) => {
     api
@@ -35,7 +31,7 @@ const ModalDetails = ({ newTechsId, title, token, show, onClose }) => {
       })
       .then((_) => {
         toast.success("Tecnologia atualizada com sucesso!");
-      })
+      }, onClose())
       .catch((_) => toast.error("Erro ao atualizar a tecnologia"));
   };
 
@@ -48,7 +44,7 @@ const ModalDetails = ({ newTechsId, title, token, show, onClose }) => {
       })
       .then((_) => {
         toast.success("Tecnologia deletada com sucesso!");
-      })
+      }, onClose())
       .catch((_) => toast.error("Erro ao deletar a tecnologia"));
   };
 

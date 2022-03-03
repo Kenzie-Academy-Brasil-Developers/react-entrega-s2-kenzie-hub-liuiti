@@ -47,7 +47,7 @@ const Dashboard = ({ auth, setAuth }) => {
             setTechs(response.data.techs);
           }
         })
-        .catch((err) => {
+        .catch((_) => {
           toast.error("Inválido!");
         });
     }
@@ -55,6 +55,7 @@ const Dashboard = ({ auth, setAuth }) => {
     return () => {
       isMounted = false;
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [techs]);
 
   if (!auth) {
@@ -80,23 +81,24 @@ const Dashboard = ({ auth, setAuth }) => {
           <h1>Olá, {user.name}</h1>
           <span>{user.course_module}</span>
         </BoxUser>
+        <TechHeader>
+          <span>Tecnologias</span>
+          <input
+            type="image"
+            src={plus}
+            alt="Submit"
+            width="15"
+            height="15"
+            onClick={() => setShowModalAdd(true)}
+          />
+        </TechHeader>
+
         <BoxTechs>
-          <TechHeader>
-            <span>Tecnologias</span>
-            <input
-              type="image"
-              src={plus}
-              alt="Submit"
-              width="15"
-              height="15"
-              onClick={() => setShowModalAdd(true)}
-            />
-            <ModalAddTechs
-              token={token}
-              onClose={() => setShowModalAdd(false)}
-              showModalAdd={showModalAdd}
-            />
-          </TechHeader>
+          <ModalAddTechs
+            token={token}
+            onClose={() => setShowModalAdd(false)}
+            showModalAdd={showModalAdd}
+          />
           <ContainerTechs>
             <ModalDetails
               newTechsId={newTechsId}
